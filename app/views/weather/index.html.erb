@@ -1,3 +1,4 @@
+<%= javascript_include_tag "//www.google.com/jsapi", "chartkick" %>
 <link href='http://fonts.googleapis.com/css?family=Cutive+Mono'
 	rel='stylesheet' type='text/css'>
 <style>
@@ -23,4 +24,10 @@ h1 {
 		<%= @fwa_in_temp %> <br />
 		<%= @fwa_updated_temp %> <br />
 	</result_text>
+</div>
+<div>
+<%= line_chart [
+  {name: "Fort Wayne", data: @fwa_temp_data_array.map{|t| [t.TimeInServer, t.TemperatureC] }},
+  {name: "House", data: @fwa_temp_data_array.map{|t| [t.TimeInServer, t.HouseTemperatureC] }}
+] %>
 </div>

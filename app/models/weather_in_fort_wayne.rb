@@ -1,15 +1,17 @@
+require 'date'
+
 class WeatherInFortWayne < ActiveRecord::Base
 	self.table_name = "current_weather_view_FWA"
 	self.primary_key = :KeyId
 
-
 	#Scopes
 
-	scope :allSince, lambda {|ssboearg|
-		where("SSBOE >= ?","#{ssboearg}")
+	scope :allSince, -> (ssboearg) {
+		where("SSBOE >= ?", "#{ssboearg}")
 	}
 
-	# attr_accessor :KeyID
-	# attr_accessor :WeatherLocation
-	# attr_accessor :TimeInServer
+	scope :lastTwelveHours, -> () {
+		where("SSBOE >= ?", 12.hour.ago.to_i)
+	}
+
 end
