@@ -27,29 +27,25 @@ Follow the on-screen instructions to get Passenger installed, edit httpd.conf as
 reference on how to install Passenger, refer to their documentation:
 http://www.modrails.com/documentation/Users%20guide%20Apache.html
 
-`cd /var/www/html`
-
-`git clone git@bitbucket.org:iarenzana/metea-home.rb.git`
-
-`cd metea-home.rb`
-
-`bundle install`
-
-`cd ..`
-
-`chown -R apache:apache metea-home.rb`
-
+```shell
+cd /var/www/html
+git clone git@bitbucket.org:iarenzana/metea-home.rb.git
+cd metea-home.rb
+bundle install
+cd ..
+chown -R apache:apache metea-home.rb
+```
 
 Make sure RUBY_ENV=production and SECREY_KEY_BASE are set on your shell and it's passed to the Ruby application.
 This is a good way to do it: https://coderwall.com/p/djrfra.
 
 Restart Apache.
 
+#Database Configuration
 
-Things you may want to cover:
+Coming soon.
 
+#LICENSE
 
-* Database creation
-
-* Database initialization
+Metea Home is protected by the GPLv2 license.
 
