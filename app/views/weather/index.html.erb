@@ -15,7 +15,7 @@ h1 {
 	text-align:center;
 }
 </style>
-<h1>Metea Home.rb - v0.1</h1>
+<title>Metea Home.rb - v0.1</title>
 <h1>Metea Home</h1>
 <br />
 <div align="right">
@@ -27,7 +27,7 @@ h1 {
 </div>
 <div>
 <%= line_chart [
-  {name: "Fort Wayne", data: @fwa_temp_data_array.map{|t| [t.TimeInServer, t.TemperatureC] }},
-  {name: "House", data: @fwa_temp_data_array.map{|t| [t.TimeInServer, t.HouseTemperatureC] }}
+  {name: "Fort Wayne", data: @fwa_temp_data_array.map{|t| [Time.at(t.SSBOE).in_time_zone("Eastern Time (US & Canada)"), t.TemperatureC] }},
+  {name: "House", data: @fwa_temp_data_array.map{|t| [Time.at(t.SSBOE).in_time_zone("Eastern Time (US & Canada)"), t.HouseTemperatureC] }}
 ] %>
 </div>
