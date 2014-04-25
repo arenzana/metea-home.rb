@@ -47,5 +47,5 @@ Coming soon.
 
 #LICENSE
 
-Metea Home is protected by the GPLv2 license.
+Metea Home is distributed under the GPLv2 license.
 
