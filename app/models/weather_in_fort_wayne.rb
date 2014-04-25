@@ -1,7 +1,7 @@
 require 'date'
 
 class WeatherInFortWayne < ActiveRecord::Base
-	self.table_name = "current_weather_view_FWA"
+	self.table_name = "current_weather_view_FWA_1000"
 	self.primary_key = :KeyId
 
 	#Scopes

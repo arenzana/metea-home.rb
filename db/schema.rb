@@ -113,6 +113,27 @@ ActiveRecord::Schema.define(version: 20140419140959) do
     t.integer  "KeyID",                limit: 8,  default: 0, null: false
   end
 
+  create_table "current_weather_view_FWA_1000", id: false, force: true do |t|
+    t.string   "Location",             limit: 45
+    t.datetime "TimeInServer"
+    t.datetime "TimeInDestination"
+    t.string   "TimeZone",             limit: 45
+    t.integer  "SSBOE",                limit: 8,              null: false
+    t.string   "WindDirection",        limit: 45
+    t.float    "WindSpeedKh"
+    t.float    "WindSpeedMph"
+    t.string   "RelativeHumidity",     limit: 5
+    t.integer  "BarometricPressureMb"
+    t.integer  "BarometricPressureIn"
+    t.string   "Precipitation",        limit: 50
+    t.integer  "UV"
+    t.float    "TemperatureC"
+    t.float    "TemperatureF"
+    t.float    "HouseTemperatureC",                           null: false
+    t.float    "HouseTemperaturef",                           null: false
+    t.integer  "KeyID",                limit: 8,  default: 0, null: false
+  end
+
   create_table "house_temperature", primary_key: "key_id", force: true do |t|
     t.float     "temperature_c",           null: false
     t.float     "temperature_f",           null: false
