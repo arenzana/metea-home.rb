@@ -25,7 +25,7 @@ docker pull iarenzana/metea-home.rb
 docker run -d -p 80:80 iarenzana/metea-home.rb
 ```
 
-##You can download the source code and build the Docker container yourself like this:
+##Download the source code and build the Docker container yourself
 
 This method is less intuitive but gives you the freedom of easily modifying the source code.
 ```
