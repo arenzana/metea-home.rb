@@ -12,7 +12,7 @@ Rails 4.1.0
 
 #Installation
 
-Metea Home for Ruby runs inside a [Docker](https://docker.com/ "Docker") container. Make sure you have [Docker installed] (http://docs.docker.com/installation/ "Docker Installation) in order to run this web application.
+Metea Home for Ruby runs inside a [Docker](https://docker.com) container. Make sure you have [Docker installed] (http://docs.docker.com/installation) in order to run this web application.
 
 Once Docker is installed, you can:
 
